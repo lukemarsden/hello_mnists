@@ -54,3 +54,6 @@ if __name__ == '__main__':
     # most basic trainer, uses good defaults (auto-tensorboard, checkpoints, logs, and more)
     trainer = pl.Trainer(gpus=args.gpus, max_epochs=args.max_epochs)
     trainer.fit(model, train_loader)
+
+    # XXX pretend we know how to serialize the model to a file:
+    open("/out/model.ckpt", "w").write("fish")
